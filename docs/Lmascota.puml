@@ -1,0 +1,36 @@
+@startuml mascota 
+class Mascota 
+class Alimento
+class Casa 
+class Salud 
+class Juguete 
+Class Pelota 
+class Animal
+class Ropa
+class Color 
+class Amigo
+class Nombre
+class Emociones
+class Pelo
+
+Mascota "1" o-- "1" Alimento
+Mascota -|> Animal
+Mascota "1" o-- "2" Casa
+Mascota "1" *-- "*"Juguete
+Juguete "1" *--- "*" Color
+Mascota "1" o-- "2" Pelota
+Pelota --> Juguete
+Mascota "1" *-- "3" Amigo
+Mascota "1" *-- "1" Nombre
+Amigo --> Animal
+Amigo "1" *-- "1" Nombre
+Mascota "1" o-- "*" Ropa
+Ropa "1" o-- "*" Color
+Mascota "1" *-- "1" Pelo
+Alimento --> Salud
+Mascota "1" *-- "1" Salud
+Mascota "1" *-- "2" Emociones
+Emociones --> Salud
+Pelota "1" o-- "*" Color
+Pelo "1" *-- "1" Color
+@enduml
